@@ -1,0 +1,8 @@
+- hosts: 10.142.0.13
+  tasks:
+  - name: Java Ubuntu Setup
+    when: ansible_pkg_mgr == "apt"
+    include_tasks: Ubuntu_Tasks2.yml
+  - name: Java CentOS Setup
+    when: ansible_pkg_mgr == "yum"
+    include_tasks: CentOS_Tasks.yml
