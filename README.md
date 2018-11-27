@@ -4,5 +4,7 @@ We should desire automation, my files achieve this. We use the ```when``` comman
 
 The CentOS_tasks.yml file will install nexus on to a CentOS machine whose package manager is ```yum```, and the Ubuntu_tasks.yml will install jenkins on an Ubuntu machine whose package manager is ```apt```. It is the package manager that we are primarily concerned with.
 
+The ```include_tasks``` module in the ansible_programs_all.yml will run the .yml files containing our tasks (CentOS_tasks.yml and Ubuntu_tasks.yml).
+
 *NOTE:*
 We must specifically install openjdk_8_jdk on the Ubuntu machine. Remember, jenkins will only run on version 8 of Java.
